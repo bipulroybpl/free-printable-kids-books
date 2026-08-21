@@ -1,20 +1,20 @@
 /*
-  Print stylesheet for 8.5in x 8.5in children's books at 300 DPI
+  Print stylesheet for A4-portrait children's books at 300 DPI
   with 0.125in bleed on all sides.
 
-  Trim size:      8.5in  x 8.5in   = 2550px x 2550px  @ 300 DPI
-  Bleed size:      8.75in x 8.75in  = 2625px x 2625px @ 300 DPI
+  Trim size:      8.27in x 11.69in  = 2481px x 3507px  @ 300 DPI (A4: 210mm x 297mm)
+  Bleed size:      8.52in x 11.94in  = 2556px x 3582px  @ 300 DPI
   Safe margin:     recommend >= 0.25in inset from trim edge for text/key art
 */
 
 @page {
-  size: 8.75in 8.75in; /* trim + bleed on all sides */
+  size: 8.52in 11.94in; /* trim + bleed on all sides */
   margin: 0;
 }
 
 :root {
-  --trim-width: 8.5in;
-  --trim-height: 8.5in;
+  --trim-width: 8.27in;
+  --trim-height: 11.69in;
   --bleed: 0.125in;
   --page-width: calc(var(--trim-width) + (2 * var(--bleed)));
   --page-height: calc(var(--trim-height) + (2 * var(--bleed)));

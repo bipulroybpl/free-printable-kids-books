@@ -4,8 +4,8 @@
   "age_range": "0-1",
   "developmental_focus": "Visual contrast tracking and early focal attention. Infant vision (0-4 months) responds most strongly to sharp black/white/red contrast before full color perception develops (~4-6 months).",
   "trim_size": {
-    "width_in": 8.5,
-    "height_in": 8.5
+    "width_in": 8.27,
+    "height_in": 11.69
   },
   "print_spec": {
     "dpi": 300,

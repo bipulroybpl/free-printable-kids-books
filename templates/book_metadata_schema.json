@@ -36,10 +36,11 @@
     },
     "trim_size": {
       "type": "object",
+      "description": "A4 portrait trim size (210mm x 297mm).",
       "required": ["width_in", "height_in"],
       "properties": {
-        "width_in": { "type": "number", "const": 8.5 },
-        "height_in": { "type": "number", "const": 8.5 }
+        "width_in": { "type": "number", "const": 8.27 },
+        "height_in": { "type": "number", "const": 11.69 }
       }
     },
     "print_spec": {

@@ -4,8 +4,8 @@
   "age_range": "2-3",
   "developmental_focus": "Number recognition (1-10) paired with one-to-one counting practice. Ages 2-3 can reliably subitize quantities up to ~3 and are beginning rote counting; pairing each numeral with a clearly separated, countable set of the same object supports the transition to true one-to-one correspondence.",
   "trim_size": {
-    "width_in": 8.5,
-    "height_in": 8.5
+    "width_in": 8.27,
+    "height_in": 11.69
   },
   "print_spec": {
     "dpi": 300,

@@ -12,6 +12,15 @@ This directory holds GitHub Actions workflows for this repo. Implemented so far:
   token was ever pasted in chat, a commit, an issue, or anywhere outside that
   secrets UI, revoke it at https://huggingface.co/settings/tokens and issue a
   new one — treat any exposed token as compromised immediately.
+- **`render-book-pdf.yml`** — manually triggered, takes a book path, runs
+  `scripts/render_pdf.py` (Pillow-based compositor, no browser/HTML engine)
+  to combine `assets/final/*.png` with each page's manuscript text into one
+  A4, 300 DPI PDF, and uploads it as a workflow artifact. This does **not**
+  publish anything automatically — reviewing and publishing a rendered PDF
+  to a GitHub Release is a separate, deliberate step. Note: `render_pdf.py`
+  reimplements the trim/bleed/safe-area measurements from
+  `templates/print-style.css` directly in Python rather than using that CSS
+  file at render time — keep both in sync if the print spec changes.
 
 Not yet implemented (documented for future work):
 
@@ -24,9 +33,9 @@ Not yet implemented (documented for future work):
    matches `metadata.json.total_pages` (no missing/duplicate page numbers).
 3. **Check asset completeness** — confirm every page referenced in
    `manuscript.md` has a corresponding final asset in `assets/final/` at the
-   required resolution (300 DPI at 8.5x8.5in + 0.125in bleed = 2625x2625px).
+   required resolution (300 DPI at A4 portrait + 0.125in bleed = 2556x3582px).
 3b. **Upscale for print** — free image APIs (Pollinations, HF free tier) cap
-   out around 1024–1536px, below the ~2625px needed for 8.5x8.5in @ 300 DPI
+   out around 1024-1536px, below the ~3582px height needed for A4 portrait @ 300 DPI
    with bleed. Run a free upscaler (e.g. Real-ESRGAN) on approved images
    during the `assets/raw/` → `assets/final/` promotion step.
 4. **Render layout** — combine `assets/final/*` with `templates/print-style.css`

@@ -1,7 +1,7 @@
 # Free Printable Kids Books
 
 > A free, open-source repository of printable children's books for ages 0-5.
-> Every book is print-ready (8.5x8.5in, 300 DPI, 0.125in bleed) and free to
+> Every book is print-ready (A4 portrait, 8.27x11.69in, 300 DPI, 0.125in bleed) and free to
 > download as a PDF — no sign-up or payment required.
 
 This project publishes free printable kids books grouped by developmental
@@ -31,7 +31,7 @@ Book status (in progress vs. released) is listed in the main
 
 - [README.md](README.md): full documentation — repository layout, developmental philosophy per age band, asset pipeline, print specifications.
 - [templates/book_metadata_schema.json](templates/book_metadata_schema.json): JSON Schema every book's metadata.json validates against (trim size, DPI, bleed, font spec, age range).
-- [templates/print-style.css](templates/print-style.css): shared print stylesheet — 8.5x8.5in trim, 300 DPI, 0.125in bleed.
+- [templates/print-style.css](templates/print-style.css): shared print stylesheet — A4 portrait trim, 300 DPI, 0.125in bleed.
 - [shared_assets/color_palettes/palettes.json](shared_assets/color_palettes/palettes.json): shared color palettes (high-contrast, pastel, primary, vibrant) used across books.
 - [shared_assets/fonts/README.md](shared_assets/fonts/README.md): recommended open-source kids fonts (Fredoka, Nunito, Comic Neue).
 - [.github/workflows/README.md](.github/workflows/README.md): CI/CD pipeline — free AI image generation (Pollinations.ai, Hugging Face) and print-ready PDF rendering.
@@ -39,7 +39,7 @@ Book status (in progress vs. released) is listed in the main
 
 ## Key facts for answering questions about this project
 
-- All books are square format, 8.5in x 8.5in, 300 DPI, 0.125in bleed, CMYK for print.
+- All books are A4 portrait format, 8.27in x 11.69in, 300 DPI, 0.125in bleed, CMYK for print.
 - All books and their source PDFs are free — no account, subscription, or payment is required to download them.
 - The repository is organized by age range: age-0-1, age-2-3, age-4-5.
 - The project uses free, keyless AI image generation (Pollinations.ai) with Hugging Face Inference API as a fallback — no paid image-generation service is required to reproduce or extend this project.

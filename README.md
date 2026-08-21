@@ -3,7 +3,7 @@
 **Free printable children's books for babies, toddlers, and preschoolers —
 high-contrast baby books, feelings & emotions books for toddlers, and
 step-by-step drawing books for kids.** Every book is print-ready (300 DPI,
-8.5x8.5in) and free to download as a PDF — no sign-up required.
+A4, 8.27x11.69in) and free to download as a PDF — no sign-up required.
 
 📦 Repo: [github.com/bipulroybpl/free-printable-kids-books](https://github.com/bipulroybpl/free-printable-kids-books)
 
@@ -32,7 +32,7 @@ at professional quality and safe for its intended age.
 
 ```
 .github/workflows/       CI/CD: automated image generation + PDF rendering pipeline docs
-templates/                Shared schema + print stylesheet (8.5x8.5in, 300 DPI, 0.125in bleed)
+templates/                Shared schema + print stylesheet (A4 portrait, 300 DPI, 0.125in bleed)
 shared_assets/
   fonts/                   Recommended open-source kids fonts (Fredoka, Nunito, Comic Neue)
   color_palettes/          Shared HEX/CMYK palette definitions
@@ -105,8 +105,8 @@ manuscript.md  →  prompts/image_prompts.json  →  free AI image generation  �
 2. **Image prompts** (`prompts/image_prompts.json`) translate each page's
    visual description into a structured AI prompt, using the book's assigned
    color palette (`shared_assets/color_palettes/palettes.json`), consistent
-   style modifiers, and `--ar 1:1` aspect ratio (matching the 8.5x8.5in
-   square trim).
+   style modifiers. Source art is generated at a square 1:1 aspect ratio and
+   composited into the A4 portrait page layout at render time.
 3. **Image generation** uses free APIs (Pollinations.ai, Hugging Face
    Inference API) via `.github/workflows/generate-book-images.yml` to produce
    draft images into `assets/raw/`.
@@ -125,9 +125,9 @@ manuscript.md  →  prompts/image_prompts.json  →  free AI image generation  �
 All free printable books in this repo share one print spec, defined once in
 `templates/book_metadata_schema.json` and `templates/print-style.css`:
 
-- **Trim size**: 8.5in x 8.5in (square format, common for picture books).
-- **Resolution**: 300 DPI — at trim size this is 2550x2550px; with bleed,
-  2625x2625px.
+- **Trim size**: A4 portrait, 8.27in x 11.69in (210mm x 297mm).
+- **Resolution**: 300 DPI — at trim size this is 2481x3507px; with bleed,
+  2556x3582px.
 - **Bleed**: 0.125in on all four sides. All full-bleed art must extend to the
   bleed edge; keep text and key visual elements inside the "safe area"
   (0.25in inset from the trim line — see `.safe-area` in `print-style.css`).

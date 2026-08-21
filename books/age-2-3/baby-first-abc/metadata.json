@@ -4,8 +4,8 @@
   "age_range": "2-3",
   "developmental_focus": "Letter-shape recognition and letter-to-object vocabulary association (not reading/decoding). Ages 2-3 can begin matching a letter shape to a familiar object and its spoken first sound when read aloud by a caregiver.",
   "trim_size": {
-    "width_in": 8.5,
-    "height_in": 8.5
+    "width_in": 8.27,
+    "height_in": 11.69
   },
   "print_spec": {
     "dpi": 300,

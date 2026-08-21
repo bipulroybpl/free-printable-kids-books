@@ -26,3 +26,6 @@ shared_assets/fonts/*.otf
 # Node/build tooling if a renderer is added later
 node_modules/
 dist/
+
+# Rendered PDFs are build output, published via GitHub Releases, not committed
+books/**/*.pdf

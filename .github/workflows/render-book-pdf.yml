@@ -1,0 +1,41 @@
+name: Render Book PDF
+
+# Manually triggered: pick a book, render its assets/final/*.png + manuscript
+# text into one print-ready PDF (A4, 300 DPI, per templates/print-style.css),
+# and upload it as a workflow artifact for download/review. Publishing a
+# reviewed PDF to a GitHub Release is a separate, deliberate step -- this
+# workflow does not publish anything on its own.
+
+on:
+  workflow_dispatch:
+    inputs:
+      book_path:
+        description: "Path to the book directory, e.g. books/age-2-3/character-feelings"
+        required: true
+        type: string
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: pip install Pillow
+
+      - name: Render PDF
+        run: |
+          python .github/workflows/scripts/render_pdf.py "${{ inputs.book_path }}"
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: "book-pdf-${{ github.run_id }}"
+          path: "${{ inputs.book_path }}/*.pdf"
+          retention-days: 30
