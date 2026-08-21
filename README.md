@@ -12,7 +12,7 @@ A4, 8.27x11.69in) and free to download as a PDF — no sign-up required.
 | Age | Book | What it teaches | Status |
 |---|---|---|---|
 | 0-1 (babies) | [High-Contrast Shapes](books/age-0-1/high-contrast-shapes/) | Visual contrast tracking — a free **high contrast baby book** for newborn visual stimulation | In progress |
-| 2-3 (toddlers) | [Character Feelings](books/age-2-3/character-feelings/) | Emotional vocabulary — a free **feelings book for toddlers** / emotions book for kids | In progress |
+| 2-3 (toddlers) | [Character Feelings](books/age-2-3/character-feelings/) | Emotional vocabulary — a free **feelings book for toddlers** / emotions book for kids | [Download PDF](https://github.com/bipulroybpl/free-printable-kids-books/releases/tag/character-feelings-v1) |
 | 2-3 (toddlers) | [Baby's First Learning ABC](books/age-2-3/baby-first-abc/) | Letter-shape recognition & vocabulary — a free **alphabet book for toddlers** / ABC book for kids | In progress |
 | 2-3 (toddlers) | [Baby's First Learning 123](books/age-2-3/baby-first-123/) | Number recognition & one-to-one counting (1-10) — a free **counting book for toddlers** / 123 book for kids | In progress |
 | 4-5 (preschoolers) | [Step-by-Step Drawing](books/age-4-5/step-by-step-drawing/) | Fine-motor sequencing — a free **kids drawing book**, learn to draw step by step | In progress |
