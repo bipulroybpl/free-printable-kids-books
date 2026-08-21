@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "page": 2, "shape": "apple" },
+    { "page": 3, "shape": "banana" },
+    { "page": 4, "shape": "orange" },
+    { "page": 5, "shape": "grapes" },
+    { "page": 6, "shape": "strawberry" },
+    { "page": 7, "shape": "watermelon" },
+    { "page": 8, "shape": "pineapple" },
+    { "page": 9, "shape": "pear" }
+  ]
+}

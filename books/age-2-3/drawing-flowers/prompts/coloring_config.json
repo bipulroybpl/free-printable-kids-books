@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "page": 2, "shape": "sunflower" },
+    { "page": 3, "shape": "tulip" },
+    { "page": 4, "shape": "daisy" },
+    { "page": 5, "shape": "rose" },
+    { "page": 6, "shape": "tree" },
+    { "page": 7, "shape": "butterfly" },
+    { "page": 8, "shape": "leaf" },
+    { "page": 9, "shape": "mushroom" }
+  ]
+}
