@@ -13,6 +13,7 @@ step-by-step drawing books for kids.** Every book is print-ready (300 DPI,
 |---|---|---|---|
 | 0-1 (babies) | [High-Contrast Shapes](books/age-0-1/high-contrast-shapes/) | Visual contrast tracking — a free **high contrast baby book** for newborn visual stimulation | In progress |
 | 2-3 (toddlers) | [Character Feelings](books/age-2-3/character-feelings/) | Emotional vocabulary — a free **feelings book for toddlers** / emotions book for kids | In progress |
+| 2-3 (toddlers) | [Baby's First Learning ABC](books/age-2-3/baby-first-abc/) | Letter-shape recognition & vocabulary — a free **alphabet book for toddlers** / ABC book for kids | In progress |
 | 4-5 (preschoolers) | [Step-by-Step Drawing](books/age-4-5/step-by-step-drawing/) | Fine-motor sequencing — a free **kids drawing book**, learn to draw step by step | In progress |
 
 > Finished, print-ready PDFs are published under [Releases](https://github.com/bipulroybpl/free-printable-kids-books/releases) as each title is completed. Source manuscripts, prompts, and print specs for every book live in this repo.

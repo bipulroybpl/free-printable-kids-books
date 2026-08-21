@@ -1,0 +1,28 @@
+{
+  "title": "Baby's First Learning ABC",
+  "book_id": "baby-first-abc",
+  "age_range": "2-3",
+  "developmental_focus": "Letter-shape recognition and letter-to-object vocabulary association (not reading/decoding). Ages 2-3 can begin matching a letter shape to a familiar object and its spoken first sound when read aloud by a caregiver.",
+  "trim_size": {
+    "width_in": 8.5,
+    "height_in": 8.5
+  },
+  "print_spec": {
+    "dpi": 300,
+    "bleed_in": 0.125,
+    "color_mode": "CMYK"
+  },
+  "font_spec": {
+    "primary_font": "Fredoka",
+    "fallback_font": "Nunito",
+    "min_point_size": 28
+  },
+  "total_pages": 28,
+  "color_palette": "primary",
+  "safety_notes": [
+    "One letter and one object per page only; no cursive or serif letterforms.",
+    "Consistent googly-eyes-and-smile character treatment applied to every letter and every object across all 26 pages.",
+    "Every object chosen is a common, unambiguous, safe word for the letter (see manuscript.md for the substitution note on K and X).",
+    "No sharp objects, no small choking-hazard-shaped items, no imagery that could read as frightening once a face is added."
+  ]
+}
