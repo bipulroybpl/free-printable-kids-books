@@ -15,6 +15,7 @@ A4, 8.27x11.69in) and free to download as a PDF — no sign-up required.
 | 2-3 (toddlers) | [Character Feelings](books/age-2-3/character-feelings/) | Emotional vocabulary — a free **feelings book for toddlers** / emotions book for kids | [Download PDF](https://github.com/bipulroybpl/free-printable-kids-books/releases/tag/character-feelings-v1) |
 | 2-3 (toddlers) | [Baby's First Learning ABC](books/age-2-3/baby-first-abc/) | Letter-shape recognition & vocabulary — a free **alphabet book for toddlers** / ABC book for kids | In progress |
 | 2-3 (toddlers) | [Baby's First Learning 123](books/age-2-3/baby-first-123/) | Number recognition & one-to-one counting (1-10) — a free **counting book for toddlers** / 123 book for kids | In progress |
+| 2-3 (toddlers) | [My First Animal Sounds](books/age-2-3/animal-sounds/) | Vocabulary & auditory-verbal imitation — a free **animal sounds book for toddlers** / animal book for kids | In progress |
 | 4-5 (preschoolers) | [Step-by-Step Drawing](books/age-4-5/step-by-step-drawing/) | Fine-motor sequencing — a free **kids drawing book**, learn to draw step by step | In progress |
 
 > Finished, print-ready PDFs are published under [Releases](https://github.com/bipulroybpl/free-printable-kids-books/releases) as each title is completed. Source manuscripts, prompts, and print specs for every book live in this repo.

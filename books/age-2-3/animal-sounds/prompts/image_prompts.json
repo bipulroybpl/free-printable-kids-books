@@ -1,0 +1,29 @@
+{
+  "book_id": "animal-sounds",
+  "style_modifiers_global": "2D flat vector children's picture book illustration, one single friendly cartoon animal character alone in a simple scene, soft rounded shapes, flat bold color fill, thick clean black outlines, warm smiling expression, no other animals or human characters in frame, no photorealism, no anime style --ar 1:1 --style raw --v 6",
+  "background_constraints": "simple flat bold-color background implying one setting element only (field, sky, pond, branch, flower) -- no cluttered scenery, animal always the single clear focal point",
+  "color_palette_ref": "shared_assets/color_palettes/palettes.json#/palettes/primary",
+  "character_reference": "Every animal rendered in the same flat 2D vector illustration style with consistent simple dot eyes and a curved smile, scaled appropriately as a young/friendly version of the animal (cub, chick, calf) where relevant",
+  "prompts": [
+    { "page": 2, "prompt": "2D flat vector illustration of a single friendly cartoon cow standing alone in a grassy field, smiling, bold blue sky background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 3, "prompt": "2D flat vector illustration of a single friendly cartoon dog sitting alone, wagging its tail, smiling, bold yellow background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 4, "prompt": "2D flat vector illustration of a single friendly cartoon cat sitting alone, smiling, bold green background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 5, "prompt": "2D flat vector illustration of a single friendly cartoon duck standing alone beside a small pond, smiling, bold blue background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 6, "prompt": "2D flat vector illustration of a single friendly fluffy cartoon sheep standing alone in a field, smiling, bold green background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 7, "prompt": "2D flat vector illustration of a single friendly cartoon pig standing alone in a field, smiling, bold pink background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 8, "prompt": "2D flat vector illustration of a single friendly cartoon horse standing alone in a field, smiling, bold orange background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 9, "prompt": "2D flat vector illustration of a single friendly cartoon baby elephant with big ears standing alone, smiling, bold gray-blue background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 10, "prompt": "2D flat vector illustration of a single friendly smiling cartoon lion cub with a fluffy mane sitting alone, gentle non-threatening pose, bold orange background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 11, "prompt": "2D flat vector illustration of a single friendly cartoon frog sitting alone on a lily pad, smiling, bold green background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 12, "prompt": "2D flat vector illustration of a single friendly cartoon owl sitting alone on a branch, smiling, bold purple night-sky background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 13, "prompt": "2D flat vector illustration of a single friendly rounded cartoon bee flying alone near one flower, smiling, no emphasized stinger, non-threatening rounded shape, bold yellow background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" }
+  ],
+  "prohibited_elements": [
+    "more than one animal or any human character in a single page",
+    "photorealistic or anime rendering -- flat 2D vector illustration only",
+    "aggressive, roaring, or predatory poses on any animal",
+    "realistic wasp-like or threatening depiction of the bee",
+    "cluttered backgrounds or multiple scene props",
+    "text embedded within the illustration itself"
+  ]
+}
