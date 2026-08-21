@@ -15,13 +15,17 @@ A4, 8.27x11.69in) and free to download as a PDF — no sign-up required.
 | 2-3 (toddlers) | [Character Feelings](books/age-2-3/character-feelings/) | Emotional vocabulary — a free **feelings book for toddlers** / emotions book for kids | [Download PDF](https://github.com/bipulroybpl/free-printable-kids-books/releases/tag/character-feelings-v1) |
 | 2-3 (toddlers) | [Baby's First Learning ABC](books/age-2-3/baby-first-abc/) | Letter-shape recognition & vocabulary — a free **alphabet book for toddlers** / ABC book for kids | In progress |
 | 2-3 (toddlers) | [Baby's First Learning 123](books/age-2-3/baby-first-123/) | Number recognition & one-to-one counting (1-10) — a free **counting book for toddlers** / 123 book for kids | In progress |
-| 2-3 (toddlers) | [My First Animal Sounds](books/age-2-3/animal-sounds/) | Vocabulary & auditory-verbal imitation — a free **animal sounds book for toddlers** / animal book for kids | In progress |
 | 2-3 (toddlers) | [Pre-Writing Strokes & Shapes](books/age-2-3/pre-writing-strokes/) | Pre-writing motor skills (lines, circles, zigzags) — the real precursor to letter tracing at this age | In progress |
 | 2-3 (toddlers) | [My First ABC Tracing](books/age-2-3/drawing-abc-letters/) | Letterform tracing (caregiver-assisted) — a free **ABC tracing book for toddlers** | In progress |
 | 2-3 (toddlers) | [My First 123 Tracing](books/age-2-3/drawing-123-numbers/) | Numeral tracing (caregiver-assisted) — a free **123 tracing book for toddlers** | In progress |
-| 2-3 (toddlers) | [Coloring Book: Fruits](books/age-2-3/drawing-fruits/) | Fine-motor coloring practice + fruit vocabulary — a free **fruit coloring book for toddlers** | In progress |
-| 2-3 (toddlers) | [Coloring Book: Flowers](books/age-2-3/drawing-flowers/) | Fine-motor coloring practice + flower vocabulary — a free **flower coloring book for toddlers** | In progress |
-| 2-3 (toddlers) | [Coloring Book: Animals](books/age-2-3/drawing-animals/) | Fine-motor coloring practice + animal vocabulary — a free **animal coloring book for toddlers** | In progress |
+| 2-3 (toddlers) | [My First Animal Sounds — Part 1](books/age-2-3/animal-sounds-part-1/) | Vocabulary & auditory-verbal imitation — a free **animal sounds book for toddlers** (12 animals) | In progress |
+| 2-3 (toddlers) | [My First Animal Sounds — Part 2](books/age-2-3/animal-sounds-part-2/) | More animal vocabulary (8 new animals) — continues Part 1, any order | Planned (images not yet generated) |
+| 2-3 (toddlers) | [Coloring Book: Fruits — Part 1](books/age-2-3/drawing-fruits-part-1/) | Fine-motor coloring practice + fruit vocabulary (8 fruits) — a free **fruit coloring book for toddlers** | In progress |
+| 2-3 (toddlers) | [Coloring Book: Fruits — Part 2](books/age-2-3/drawing-fruits-part-2/) | 8 more fruits — continues Part 1, any order | In progress |
+| 2-3 (toddlers) | [Coloring Book: Flowers — Part 1](books/age-2-3/drawing-flowers-part-1/) | Fine-motor coloring practice + flower vocabulary (8 items) — a free **flower coloring book for toddlers** | In progress |
+| 2-3 (toddlers) | [Coloring Book: Flowers — Part 2](books/age-2-3/drawing-flowers-part-2/) | 8 more flowers/nature items — continues Part 1, any order | In progress |
+| 2-3 (toddlers) | [Coloring Book: Animals — Part 1](books/age-2-3/drawing-animals-part-1/) | Fine-motor coloring practice + animal vocabulary (8 animals) — a free **animal coloring book for toddlers** | In progress |
+| 2-3 (toddlers) | [Coloring Book: Animals — Part 2](books/age-2-3/drawing-animals-part-2/) | 8 more animals — continues Part 1, any order | In progress |
 | 4-5 (preschoolers) | [Step-by-Step Drawing](books/age-4-5/step-by-step-drawing/) | Fine-motor sequencing — a free **kids drawing book**, learn to draw step by step | In progress |
 
 > Finished, print-ready PDFs are published under [Releases](https://github.com/bipulroybpl/free-printable-kids-books/releases) as each title is completed. Source manuscripts, prompts, and print specs for every book live in this repo.
@@ -81,6 +85,19 @@ Each age band targets a specific developmental milestone, not just a vague
   6 numbered steps using only basic shapes, with a consistent step-highlight
   color so a child (or reading adult) can visually track what's new at each
   step.
+
+### Multi-part books: which ones split, and why
+
+Several ages 2-3 titles are published as **Part 1 / Part 2** (Animal Sounds,
+Coloring Book: Fruits/Flowers/Animals). This split is deliberate and only
+applied to **open vocabulary sets**, where more examples are purely additive
+learning value with no sequencing dependency — a child can read/color Part 2
+before Part 1 with no loss. It is intentionally **not** applied to ABC,
+123, Pre-Writing Strokes, or Character Feelings: those are sequenced
+curricula (a full alphabet, a full 1-10 counting sequence, a
+developmentally-ordered stroke progression, and an emotional arc with
+resolution beats) where an arbitrary split would fragment the pedagogy for
+no benefit.
 
 ### Content safety checklist (applied to every book before release)
 

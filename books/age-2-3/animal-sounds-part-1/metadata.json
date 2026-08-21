@@ -1,0 +1,28 @@
+{
+  "title": "My First Animal Sounds (Part 1)",
+  "book_id": "animal-sounds-part-1",
+  "age_range": "2-3",
+  "developmental_focus": "Vocabulary explosion + auditory-verbal imitation. Ages 2-3 benefit from animal-sound books more than plain vocabulary lists because they combine label learning (animal name) with a sound the child can imitate, plus a natural call-and-response reading rhythm ('The cow says...? Moo!') that keeps the child actively participating during read-aloud.",
+  "trim_size": {
+    "width_in": 8.27,
+    "height_in": 11.69
+  },
+  "print_spec": {
+    "dpi": 300,
+    "bleed_in": 0.125,
+    "color_mode": "CMYK"
+  },
+  "font_spec": {
+    "primary_font": "Fredoka",
+    "fallback_font": "Nunito",
+    "min_point_size": 28
+  },
+  "total_pages": 14,
+  "color_palette": "primary",
+  "safety_notes": [
+    "One animal, one clear scene, one sound word per page -- no split-panel or multi-element compositions (lesson learned from the ABC book: complex single-shot compositions are not reliable with free image generators).",
+    "Lion depicted as a smiling, non-threatening cub, never a roaring/aggressive adult pose.",
+    "Bee depicted as a friendly, rounded, non-threatening cartoon with no emphasized stinger.",
+    "No animal shown in a predatory, aggressive, or frightening pose; all animals smiling/friendly and clearly safe for a toddler audience."
+  ]
+}

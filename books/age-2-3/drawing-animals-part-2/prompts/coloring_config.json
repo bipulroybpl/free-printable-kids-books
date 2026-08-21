@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "page": 2, "shape": "sheep" },
+    { "page": 3, "shape": "pig" },
+    { "page": 4, "shape": "horse" },
+    { "page": 5, "shape": "frog" },
+    { "page": 6, "shape": "fox" },
+    { "page": 7, "shape": "deer" },
+    { "page": 8, "shape": "bear" },
+    { "page": 9, "shape": "turtle" }
+  ]
+}

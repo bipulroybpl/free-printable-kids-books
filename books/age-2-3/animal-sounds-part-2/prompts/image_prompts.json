@@ -1,0 +1,24 @@
+{
+  "book_id": "animal-sounds-part-2",
+  "style_modifiers_global": "2D flat vector children's picture book illustration, one single friendly cartoon animal character alone in a simple scene, soft rounded shapes, flat bold color fill, thick clean black outlines, warm smiling expression, no other animals or human characters in frame, no photorealism, no anime style --ar 1:1 --style raw --v 6",
+  "background_constraints": "simple flat bold-color background implying one setting element only -- no cluttered scenery, animal always the single clear focal point",
+  "color_palette_ref": "shared_assets/color_palettes/palettes.json#/palettes/primary",
+  "character_reference": "Every animal rendered in the same flat 2D vector illustration style with consistent simple dot eyes and a curved smile, scaled appropriately as a young/friendly version of the animal (cub, chick, calf) where relevant",
+  "prompts": [
+    { "page": 2, "prompt": "2D flat vector illustration of a single friendly cartoon fox sitting alone, smiling, bold orange background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 3, "prompt": "2D flat vector illustration of a single friendly cartoon deer standing alone with small antlers, smiling, bold green background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 4, "prompt": "2D flat vector illustration of a single friendly cartoon chicken standing alone, smiling, bold yellow background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 5, "prompt": "2D flat vector illustration of a single friendly cartoon goat standing alone, smiling, bold brown background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 6, "prompt": "2D flat vector illustration of a single friendly smiling cartoon bear cub sitting alone, gentle non-threatening pose, bold brown background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 7, "prompt": "2D flat vector illustration of a single friendly cartoon monkey sitting alone holding a banana, smiling, bold green background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 8, "prompt": "2D flat vector illustration of a single friendly cartoon camel standing alone, smiling, bold orange background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" },
+    { "page": 9, "prompt": "2D flat vector illustration of a single friendly cartoon turtle sitting alone, smiling, bold green background, thick clean outlines, flat colors, children's picture book style --ar 1:1 --style raw --v 6" }
+  ],
+  "prohibited_elements": [
+    "more than one animal or any human character in a single page",
+    "photorealistic or anime rendering -- flat 2D vector illustration only",
+    "aggressive, roaring, or predatory poses on any animal",
+    "cluttered backgrounds or multiple scene props",
+    "text embedded within the illustration itself"
+  ]
+}

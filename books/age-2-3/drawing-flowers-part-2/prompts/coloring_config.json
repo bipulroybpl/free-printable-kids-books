@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "page": 2, "shape": "lily" },
+    { "page": 3, "shape": "hibiscus" },
+    { "page": 4, "shape": "cactus" },
+    { "page": 5, "shape": "acorn" },
+    { "page": 6, "shape": "cloud" },
+    { "page": 7, "shape": "rainbow" },
+    { "page": 8, "shape": "star" },
+    { "page": 9, "shape": "bush" }
+  ]
+}

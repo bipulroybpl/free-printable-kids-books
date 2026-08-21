@@ -168,6 +168,61 @@ def recipe_pear():
     return ops
 
 
+def recipe_mango():
+    ops = [("ellipse", [F(0.28), F(0.28), F(0.72), F(0.80)], "add")]
+    ops.append(("rectangle", [F(0.485), F(0.20), F(0.515), F(0.30)], "add"))
+    ops.append(("ellipse", circle_bbox(0.60, 0.24, 0.08), "add"))
+    return ops
+
+
+def recipe_lemon():
+    ops = [("ellipse", [F(0.28), F(0.30), F(0.72), F(0.78)], "add")]
+    ops.append(("polygon", [(F(0.44), F(0.30)), (F(0.5), F(0.16)), (F(0.56), F(0.30))], "add"))
+    ops.append(("polygon", [(F(0.44), F(0.78)), (F(0.5), F(0.92)), (F(0.56), F(0.78))], "add"))
+    return ops
+
+
+def recipe_peach():
+    ops = [("ellipse", circle_bbox(0.5, 0.55, 0.27), "add")]
+    ops.append(("ellipse", circle_bbox(0.5, 0.31, 0.05), "sub"))
+    ops.append(("ellipse", circle_bbox(0.60, 0.24, 0.08), "add"))
+    return ops
+
+
+def recipe_cherries():
+    ops = [
+        ("ellipse", circle_bbox(0.36, 0.62, 0.15), "add"),
+        ("ellipse", circle_bbox(0.64, 0.62, 0.15), "add"),
+        ("arc_band", ([F(0.30), F(0.15), F(0.5), F(0.50)], 0, 130, round(F(0.02))), "add"),
+        ("arc_band", ([F(0.5), F(0.15), F(0.70), F(0.50)], 50, 180, round(F(0.02))), "add"),
+    ]
+    return ops
+
+
+def recipe_plum():
+    ops = [("ellipse", circle_bbox(0.5, 0.55, 0.25), "add")]
+    ops.append(("rectangle", [F(0.485), F(0.24), F(0.515), F(0.32)], "add"))
+    return ops
+
+
+def recipe_kiwi():
+    ops = [("ellipse", circle_bbox(0.5, 0.5, 0.28), "add")]
+    return ops
+
+
+def recipe_coconut():
+    ops = [("ellipse", [F(0.26), F(0.30), F(0.74), F(0.82)], "add")]
+    ops.append(("polygon", [(F(0.42), F(0.30)), (F(0.5), F(0.16)), (F(0.58), F(0.30))], "add"))
+    return ops
+
+
+def recipe_fig():
+    ops = [("ellipse", circle_bbox(0.5, 0.40, 0.15), "add")]
+    ops.append(("ellipse", circle_bbox(0.5, 0.68, 0.24), "add"))
+    ops.append(("rectangle", [F(0.485), F(0.14), F(0.515), F(0.24)], "add"))
+    return ops
+
+
 def recipe_sunflower():
     return petal_ring(0.5, 0.42, 0.14, 0.11, 8, 0.24) + [
         ("rectangle", [F(0.485), F(0.55), F(0.515), F(0.90)], "add"),
@@ -231,6 +286,77 @@ def recipe_leaf():
 def recipe_mushroom():
     ops = [("pieslice", ([F(0.22), F(0.15), F(0.78), F(0.65)], 180, 360), "add")]
     ops.append(("rectangle", [F(0.40), F(0.50), F(0.60), F(0.88)], "add"))
+    return ops
+
+
+def recipe_lily():
+    return petal_ring(0.5, 0.40, 0.08, 0.15, 6, 0.26) + [
+        ("rectangle", [F(0.485), F(0.55), F(0.515), F(0.90)], "add"),
+    ]
+
+
+def recipe_hibiscus():
+    return petal_ring(0.5, 0.42, 0.10, 0.17, 5, 0.23) + [
+        ("rectangle", [F(0.485), F(0.58), F(0.515), F(0.90)], "add"),
+    ]
+
+
+def recipe_cactus():
+    ops = [("ellipse", [F(0.36), F(0.30), F(0.64), F(0.85)], "add")]
+    ops.append(("ellipse", [F(0.16), F(0.42), F(0.38), F(0.60)], "add"))
+    ops.append(("ellipse", [F(0.62), F(0.36), F(0.84), F(0.54)], "add"))
+    return ops
+
+
+def recipe_acorn():
+    ops = [("ellipse", circle_bbox(0.5, 0.62, 0.22), "add")]
+    ops.append(("ellipse", [F(0.24), F(0.24), F(0.76), F(0.48)], "add"))
+    ops.append(("rectangle", [F(0.47), F(0.16), F(0.53), F(0.26)], "add"))
+    return ops
+
+
+def recipe_cloud():
+    ops = [
+        ("ellipse", circle_bbox(0.34, 0.55, 0.18), "add"),
+        ("ellipse", circle_bbox(0.5, 0.45, 0.20), "add"),
+        ("ellipse", circle_bbox(0.66, 0.55, 0.18), "add"),
+        ("ellipse", [F(0.24), F(0.55), F(0.76), F(0.78)], "add"),
+    ]
+    return ops
+
+
+def recipe_rainbow():
+    ops = []
+    bboxes = [
+        [F(0.14), F(0.30), F(0.86), F(1.02)],
+        [F(0.24), F(0.40), F(0.76), F(1.02)],
+        [F(0.34), F(0.50), F(0.66), F(1.02)],
+    ]
+    for bbox in bboxes:
+        ops.append(("arc_band", (bbox, 180, 360, round(F(0.045))), "add"))
+    return ops
+
+
+def recipe_star():
+    cx, cy, r_out, r_in = 0.5, 0.52, 0.34, 0.14
+    points = []
+    for i in range(10):
+        angle = math.pi / 2 + i * math.pi / 5
+        r = r_out if i % 2 == 0 else r_in
+        points.append((F(cx + r * math.cos(angle)), F(cy - r * math.sin(angle))))
+    return [("polygon", points, "add")]
+
+
+def recipe_bush():
+    # a flat cut-off bottom (unlike the cloud's fully-rounded silhouette)
+    # so it reads as sitting on the ground rather than floating in the sky
+    ops = [
+        ("ellipse", circle_bbox(0.32, 0.58, 0.20), "add"),
+        ("ellipse", circle_bbox(0.68, 0.58, 0.20), "add"),
+        ("ellipse", circle_bbox(0.5, 0.45, 0.22), "add"),
+        ("ellipse", [F(0.18), F(0.58), F(0.82), F(0.88)], "add"),
+        ("rectangle", [F(0.10), F(0.82), F(0.90), F(0.95)], "add"),
+    ]
     return ops
 
 
@@ -315,6 +441,96 @@ def recipe_owl():
     return ops
 
 
+def recipe_sheep():
+    ops = [
+        ("ellipse", circle_bbox(0.36, 0.60, 0.16), "add"),
+        ("ellipse", circle_bbox(0.5, 0.52, 0.18), "add"),
+        ("ellipse", circle_bbox(0.64, 0.60, 0.16), "add"),
+        ("ellipse", [F(0.20), F(0.55), F(0.80), F(0.85)], "add"),
+        ("ellipse", circle_bbox(0.78, 0.48, 0.13), "add"),
+    ]
+    for lx in (0.32, 0.44, 0.58, 0.68):
+        ops.append(("rectangle", [F(lx - 0.03), F(0.80), F(lx + 0.03), F(0.94)], "add"))
+    return ops
+
+
+def recipe_pig():
+    ops = [("ellipse", [F(0.22), F(0.46), F(0.78), F(0.76)], "add")]
+    ops.append(("ellipse", circle_bbox(0.74, 0.40, 0.16), "add"))
+    ops.append(("ellipse", circle_bbox(0.80, 0.42, 0.06), "add"))
+    ops.append(("polygon", [(F(0.66), F(0.28)), (F(0.70), F(0.16)), (F(0.74), F(0.27))], "add"))
+    for lx in (0.32, 0.44, 0.58, 0.68):
+        ops.append(("rectangle", [F(lx - 0.03), F(0.72), F(lx + 0.03), F(0.88)], "add"))
+    return ops
+
+
+def recipe_horse():
+    ops = [("ellipse", [F(0.20), F(0.46), F(0.72), F(0.76)], "add")]
+    ops.append(("ellipse", [F(0.60), F(0.20), F(0.82), F(0.52)], "add"))
+    ops.append(("polygon", [(F(0.64), F(0.20)), (F(0.68), F(0.10)), (F(0.72), F(0.19))], "add"))
+    for lx in (0.28, 0.40, 0.52, 0.62):
+        ops.append(("rectangle", [F(lx - 0.03), F(0.72), F(lx + 0.03), F(0.94)], "add"))
+    return ops
+
+
+def recipe_frog():
+    ops = [("ellipse", [F(0.24), F(0.42), F(0.76), F(0.82)], "add")]
+    ops.append(("ellipse", circle_bbox(0.38, 0.36, 0.10), "add"))
+    ops.append(("ellipse", circle_bbox(0.62, 0.36, 0.10), "add"))
+    ops.append(("ellipse", circle_bbox(0.38, 0.36, 0.04), "sub"))
+    ops.append(("ellipse", circle_bbox(0.62, 0.36, 0.04), "sub"))
+    for lx in (0.20, 0.80):
+        ops.append(("ellipse", [F(lx - 0.10), F(0.72), F(lx + 0.10), F(0.90)], "add"))
+    return ops
+
+
+def recipe_fox():
+    ops = [("ellipse", [F(0.26), F(0.46), F(0.74), F(0.78)], "add")]
+    ops.append(("ellipse", circle_bbox(0.72, 0.40, 0.15), "add"))
+    ops.append(("polygon", [(F(0.62), F(0.28)), (F(0.66), F(0.14)), (F(0.72), F(0.27))], "add"))
+    ops.append(("polygon", [(F(0.78), F(0.27)), (F(0.84), F(0.14)), (F(0.86), F(0.29))], "add"))
+    ops.append(("polygon", [(F(0.84), F(0.40)), (F(0.96), F(0.44)), (F(0.84), F(0.48))], "add"))
+    ops.append(("ellipse", [F(0.10), F(0.44), F(0.30), F(0.72)], "add"))
+    for lx in (0.36, 0.48, 0.58, 0.66):
+        ops.append(("rectangle", [F(lx - 0.03), F(0.72), F(lx + 0.03), F(0.86)], "add"))
+    return ops
+
+
+def recipe_deer():
+    ops = [("ellipse", [F(0.22), F(0.46), F(0.72), F(0.76)], "add")]
+    ops.append(("ellipse", circle_bbox(0.70, 0.38, 0.14), "add"))
+    ops.append(("polygon", [(F(0.66), F(0.26)), (F(0.60), F(0.10)), (F(0.64), F(0.08)), (F(0.70), F(0.22))], "add"))
+    ops.append(("polygon", [(F(0.76), F(0.26)), (F(0.80), F(0.08)), (F(0.84), F(0.10)), (F(0.78), F(0.24))], "add"))
+    for lx in (0.30, 0.42, 0.54, 0.64):
+        ops.append(("rectangle", [F(lx - 0.03), F(0.72), F(lx + 0.03), F(0.94)], "add"))
+    return ops
+
+
+def recipe_bear():
+    ops = [("ellipse", [F(0.22), F(0.44), F(0.78), F(0.80)], "add")]
+    ops.append(("ellipse", circle_bbox(0.74, 0.38, 0.18), "add"))
+    ops.append(("ellipse", circle_bbox(0.64, 0.22, 0.07), "add"))
+    ops.append(("ellipse", circle_bbox(0.86, 0.22, 0.07), "add"))
+    for lx in (0.32, 0.44, 0.58, 0.68):
+        ops.append(("rectangle", [F(lx - 0.045), F(0.76), F(lx + 0.045), F(0.92)], "add"))
+    return ops
+
+
+def recipe_turtle():
+    # simple overlapping ellipses (shell + head + tail), same reliable
+    # technique as pear/mango/coconut -- the earlier pieslice-based dome
+    # didn't align with separately-placed leg circles and produced floating
+    # disconnected shapes instead of one coherent turtle
+    ops = [
+        ("ellipse", [F(0.16), F(0.34), F(0.84), F(0.78)], "add"),
+        ("ellipse", circle_bbox(0.86, 0.56, 0.11), "add"),
+        ("ellipse", circle_bbox(0.13, 0.56, 0.07), "add"),
+    ]
+    for lx, ly in [(0.26, 0.72), (0.74, 0.72)]:
+        ops.append(("ellipse", [F(lx - 0.08), F(ly - 0.06), F(lx + 0.08), F(ly + 0.10)], "add"))
+    return ops
+
+
 DIRECT_DRAW = {
     "grapes": draw_grapes_direct,
 }
@@ -323,11 +539,19 @@ RECIPES = {
     "apple": recipe_apple, "banana": recipe_banana, "orange": recipe_orange,
     "strawberry": recipe_strawberry, "watermelon": recipe_watermelon,
     "pineapple": recipe_pineapple, "pear": recipe_pear,
+    "mango": recipe_mango, "lemon": recipe_lemon, "peach": recipe_peach,
+    "cherries": recipe_cherries, "plum": recipe_plum, "kiwi": recipe_kiwi,
+    "coconut": recipe_coconut, "fig": recipe_fig,
     "sunflower": recipe_sunflower, "tulip": recipe_tulip, "daisy": recipe_daisy,
     "rose": recipe_rose, "tree": recipe_tree, "butterfly": recipe_butterfly,
     "leaf": recipe_leaf, "mushroom": recipe_mushroom,
+    "lily": recipe_lily, "hibiscus": recipe_hibiscus, "cactus": recipe_cactus,
+    "acorn": recipe_acorn, "cloud": recipe_cloud, "rainbow": recipe_rainbow,
+    "star": recipe_star, "bush": recipe_bush,
     "cow": recipe_cow, "dog": recipe_dog, "cat": recipe_cat, "duck": recipe_duck,
     "elephant": recipe_elephant, "rabbit": recipe_rabbit, "fish": recipe_fish, "owl": recipe_owl,
+    "sheep": recipe_sheep, "pig": recipe_pig, "horse": recipe_horse, "frog": recipe_frog,
+    "fox": recipe_fox, "deer": recipe_deer, "bear": recipe_bear, "turtle": recipe_turtle,
 }
 
 

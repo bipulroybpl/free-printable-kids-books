@@ -151,7 +151,10 @@ def main():
     rendered = []
     for page_num in range(1, total_pages + 1):
         image_path = os.path.join(final_dir, f"page-{page_num}.png")
-        text = manuscript_pages.get(page_num, "")
+        # page 1 is a code-generated cover (see generate_cover.py) with the
+        # title already baked into the art -- skip the text banner there so
+        # it doesn't draw the title a second time on top
+        text = "" if (page_num == 1 and os.path.exists(image_path)) else manuscript_pages.get(page_num, "")
         bg_color = (255, 246, 230)  # warm off-white for cover/back/missing pages
         page_img = render_page(page_w, page_h, image_path, text, font, bleed_px, safe_px, bg_color)
         rendered.append(page_img)
