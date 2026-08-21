@@ -1,0 +1,28 @@
+{
+  "title": "Baby's First Learning 123",
+  "book_id": "baby-first-123",
+  "age_range": "2-3",
+  "developmental_focus": "Number recognition (1-10) paired with one-to-one counting practice. Ages 2-3 can reliably subitize quantities up to ~3 and are beginning rote counting; pairing each numeral with a clearly separated, countable set of the same object supports the transition to true one-to-one correspondence.",
+  "trim_size": {
+    "width_in": 8.5,
+    "height_in": 8.5
+  },
+  "print_spec": {
+    "dpi": 300,
+    "bleed_in": 0.125,
+    "color_mode": "CMYK"
+  },
+  "font_spec": {
+    "primary_font": "Fredoka",
+    "fallback_font": "Nunito",
+    "min_point_size": 28
+  },
+  "total_pages": 12,
+  "color_palette": "vibrant",
+  "safety_notes": [
+    "One number and one matching countable object set per page, numbers 1-10 only.",
+    "Objects on the right panel must be spaced clearly apart (not clustered/overlapping) so a caregiver can point to each one while counting aloud with the child.",
+    "Consistent googly-eyes-and-smile character treatment applied to every numeral and every object set across all 10 pages.",
+    "No small choking-hazard-shaped items depicted at graspable scale; all objects illustrated as whole clear scene elements (fruit, balloons, animals, stars)."
+  ]
+}

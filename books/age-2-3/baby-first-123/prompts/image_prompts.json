@@ -1,0 +1,27 @@
+{
+  "book_id": "baby-first-123",
+  "style_modifiers_global": "split-panel two-column layout, thin vertical divider line, left panel shows a glossy 3D bubble numeral with cute googly cartoon eyes and a smile on a soft light gray background, right panel shows the matching count of one glossy 3D or friendly cartoon object with cute faces, each object clearly separated with visible gaps (never overlapping or clustered), on a bold flat-color background, small colored number badge in the corner of the right panel, clean commercial 3D render style, soft shadows, no photorealistic humans, no scary or ambiguous expressions --ar 1:1 --style raw --v 6",
+  "background_constraints": "left panel: solid soft light gray background. Right panel: single bold flat color background (rotating through yellow, blue, green, orange, pink, teal, purple across the book), no clutter, no props beyond the counted objects, objects spaced clearly apart for counting",
+  "color_palette_ref": "shared_assets/color_palettes/palettes.json#/palettes/vibrant",
+  "character_reference": "Consistent cute-face treatment: large round googly cartoon eyes with eyelashes, simple curved black-line smile, applied identically to every numeral and every object across all 10 pages",
+  "prompts": [
+    { "page": 2, "prompt": "split panel image, left side a glossy orange 3D bubble numeral '1' with big googly cartoon eyes and a smile on a light gray background, right side one glossy cartoon sun with a cute face centered alone on a bold yellow background, small number 1 badge in the corner, clean 3D render, soft shadows --ar 1:1 --style raw --v 6" },
+    { "page": 3, "prompt": "split panel image, left side a glossy red 3D bubble numeral '2' with big googly cartoon eyes and a smile on a light gray background, right side two glossy red apples with cute faces clearly spaced apart side by side on a bold blue background, small number 2 badge in the corner, clean 3D render style --ar 1:1 --style raw --v 6" },
+    { "page": 4, "prompt": "split panel image, left side a glossy purple 3D bubble numeral '3' with big googly cartoon eyes and a smile on a light gray background, right side three glossy balloons with cute faces clearly spaced apart in a row on a bold green background, small number 3 badge in the corner, clean 3D render style --ar 1:1 --style raw --v 6" },
+    { "page": 5, "prompt": "split panel image, left side a glossy pink 3D bubble numeral '4' with big googly cartoon eyes and a smile on a light gray background, right side four glossy cartoon butterflies with cute faces clearly spaced apart in a row on a bold orange background, small number 4 badge in the corner, clean 3D render style --ar 1:1 --style raw --v 6" },
+    { "page": 6, "prompt": "split panel image, left side a glossy blue 3D bubble numeral '5' with big googly cartoon eyes and a smile on a light gray background, right side five glossy cartoon flowers with cute faces clearly spaced apart in a row on a bold pink background, small number 5 badge in the corner, clean 3D render style --ar 1:1 --style raw --v 6" },
+    { "page": 7, "prompt": "split panel image, left side a glossy green 3D bubble numeral '6' with big googly cartoon eyes and a smile on a light gray background, right side six glossy cartoon fish with cute faces clearly spaced apart in two rows on a bold teal background, small number 6 badge in the corner, clean 3D render style --ar 1:1 --style raw --v 6" },
+    { "page": 8, "prompt": "split panel image, left side a glossy yellow 3D bubble numeral '7' with big googly cartoon eyes and a smile on a light gray background, right side seven glossy cartoon stars with cute faces clearly spaced apart on a bold purple background, small number 7 badge in the corner, clean 3D render style --ar 1:1 --style raw --v 6" },
+    { "page": 9, "prompt": "split panel image, left side a glossy teal 3D bubble numeral '8' with big googly cartoon eyes and a smile on a light gray background, right side eight friendly cartoon ducklings with cute faces clearly spaced apart in two rows on a bold yellow background, small number 8 badge in the corner, clean 3D render style --ar 1:1 --style raw --v 6" },
+    { "page": 10, "prompt": "split panel image, left side a glossy orange 3D bubble numeral '9' with big googly cartoon eyes and a smile on a light gray background, right side nine glossy round grapes with cute faces arranged in a clear evenly-spaced grid (not a bunch) on a bold green background, small number 9 badge in the corner, clean 3D render style --ar 1:1 --style raw --v 6" },
+    { "page": 11, "prompt": "split panel image, left side a glossy red 3D bubble numeral '10' with big googly cartoon eyes and a smile on a light gray background, right side ten glossy striped balls with cute faces arranged in two clear evenly-spaced rows of five on a bold blue background, small number 10 badge in the corner, clean 3D render style --ar 1:1 --style raw --v 6" }
+  ],
+  "prohibited_elements": [
+    "overlapping, clustered, or cut-off objects that make the count ambiguous",
+    "small isolated round parts resembling choking-hazard beads or coins at graspable scale",
+    "photorealistic human faces",
+    "scary, angry, or ambiguous facial expressions",
+    "inconsistent eye/face style between numerals or objects",
+    "any numeral style other than the single bold dimensional digit specified"
+  ]
+}
