@@ -1,0 +1,28 @@
+{
+  "title": "How Do I Feel Today?",
+  "book_id": "character-feelings",
+  "age_range": "2-3",
+  "developmental_focus": "Emotional vocabulary building and self-recognition. Ages 2-3 are developing the ability to label basic emotions (happy, sad, angry, scared, surprised) in themselves and others.",
+  "trim_size": {
+    "width_in": 8.5,
+    "height_in": 8.5
+  },
+  "print_spec": {
+    "dpi": 300,
+    "bleed_in": 0.125,
+    "color_mode": "CMYK"
+  },
+  "font_spec": {
+    "primary_font": "Fredoka",
+    "fallback_font": "Nunito",
+    "min_point_size": 28
+  },
+  "total_pages": 16,
+  "color_palette": "pastel",
+  "safety_notes": [
+    "One clear, unambiguous emotion per spread — no blended or conflicting facial expressions.",
+    "No scary, threatening, or grotesque imagery; 'angry' and 'scared' depicted gently, resolved with reassurance by end of book.",
+    "Character designs consistent across all spreads (same character model sheet).",
+    "Text kept to 3-6 words per page, simple present-tense sentences."
+  ]
+}

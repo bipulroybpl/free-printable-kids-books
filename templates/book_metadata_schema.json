@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/book_metadata_schema.json",
+  "title": "Children's Book Metadata Schema",
+  "description": "Schema for metadata.json files describing a single children's book in the design system.",
+  "type": "object",
+  "required": [
+    "title",
+    "book_id",
+    "age_range",
+    "developmental_focus",
+    "trim_size",
+    "print_spec",
+    "font_spec",
+    "total_pages",
+    "color_palette"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Book title as it will appear on the cover."
+    },
+    "book_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "URL/folder-safe unique identifier, matching the book's directory name."
+    },
+    "age_range": {
+      "type": "string",
+      "enum": ["0-1", "2-3", "4-5"],
+      "description": "Target developmental age range in years."
+    },
+    "developmental_focus": {
+      "type": "string",
+      "description": "Primary developmental goal, e.g. 'visual contrast tracking', 'emotional vocabulary', 'fine-motor sequencing'."
+    },
+    "trim_size": {
+      "type": "object",
+      "required": ["width_in", "height_in"],
+      "properties": {
+        "width_in": { "type": "number", "const": 8.5 },
+        "height_in": { "type": "number", "const": 8.5 }
+      }
+    },
+    "print_spec": {
+      "type": "object",
+      "required": ["dpi", "bleed_in", "color_mode"],
+      "properties": {
+        "dpi": { "type": "integer", "const": 300 },
+        "bleed_in": { "type": "number", "const": 0.125 },
+        "color_mode": { "type": "string", "enum": ["CMYK"] }
+      }
+    },
+    "font_spec": {
+      "type": "object",
+      "required": ["primary_font", "fallback_font", "min_point_size"],
+      "properties": {
+        "primary_font": { "type": "string" },
+        "fallback_font": { "type": "string" },
+        "min_point_size": {
+          "type": "number",
+          "minimum": 18,
+          "description": "Minimum body text size in points; kept large for early-reader/adult-read-aloud legibility."
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "minimum": 8,
+      "description": "Total page count including cover, matching the manuscript.md breakdown."
+    },
+    "color_palette": {
+      "type": "string",
+      "description": "Name of the palette used from shared_assets/color_palettes/palettes.json.",
+      "enum": ["high-contrast", "pastel", "primary", "vibrant"]
+    },
+    "safety_notes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Age-appropriate content safety notes (e.g. no small-parts imagery, no ambiguous facial expressions)."
+    }
+  }
+}

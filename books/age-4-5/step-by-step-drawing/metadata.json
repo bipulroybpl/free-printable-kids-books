@@ -1,0 +1,28 @@
+{
+  "title": "I Can Draw That! Step-by-Step Fun",
+  "book_id": "step-by-step-drawing",
+  "age_range": "4-5",
+  "developmental_focus": "Fine-motor sequencing, shape composition, and following multi-step visual instructions. Ages 4-5 can hold a pencil with a tripod grip and follow 3-6 step sequences.",
+  "trim_size": {
+    "width_in": 8.5,
+    "height_in": 8.5
+  },
+  "print_spec": {
+    "dpi": 300,
+    "bleed_in": 0.125,
+    "color_mode": "CMYK"
+  },
+  "font_spec": {
+    "primary_font": "Fredoka",
+    "fallback_font": "Comic Neue",
+    "min_point_size": 20
+  },
+  "total_pages": 14,
+  "color_palette": "vibrant",
+  "safety_notes": [
+    "No scissors, blades, or unsupervised tool use depicted; drawing tools limited to crayons/markers/pencils held by the character.",
+    "Each drawing broken into no more than 6 numbered steps, using only basic shapes (circles, triangles, lines) per step.",
+    "Consistent numbering style and step-highlight color across the whole book.",
+    "Encouraging, non-competitive tone in all text (no 'wrong way' framing)."
+  ]
+}

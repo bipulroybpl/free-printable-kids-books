@@ -1,0 +1,47 @@
+name: Generate Book Images
+
+# Manually triggered: pick a book, generate its raw draft images from
+# prompts/image_prompts.json, and open a PR with the results in assets/raw/
+# for human review before anything is promoted to assets/final/.
+#
+# Requires a repo secret named HF_TOKEN (Hugging Face access token) used only
+# as a fallback if the free, keyless Pollinations.ai API is unavailable.
+# Settings -> Secrets and variables -> Actions -> New repository secret.
+# Never commit a token value into this file or any other tracked file.
+
+on:
+  workflow_dispatch:
+    inputs:
+      book_path:
+        description: "Path to the book directory, e.g. books/age-2-3/character-feelings"
+        required: true
+        type: string
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate raw images
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python .github/workflows/scripts/generate_images.py "${{ inputs.book_path }}"
+
+      - name: Open PR with generated assets
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: generate raw images for ${{ inputs.book_path }}"
+          title: "Generated images: ${{ inputs.book_path }}"
+          body: |
+            Auto-generated draft images for `${{ inputs.book_path }}/assets/raw/`.
+            **Human review required** before promoting any image to `assets/final/`
+            (see the developmental safety checklist in the root README).
+          branch: "generated-images/${{ github.run_id }}"

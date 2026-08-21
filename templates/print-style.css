@@ -1,0 +1,85 @@
+/*
+  Print stylesheet for 8.5in x 8.5in children's books at 300 DPI
+  with 0.125in bleed on all sides.
+
+  Trim size:      8.5in  x 8.5in   = 2550px x 2550px  @ 300 DPI
+  Bleed size:      8.75in x 8.75in  = 2625px x 2625px @ 300 DPI
+  Safe margin:     recommend >= 0.25in inset from trim edge for text/key art
+*/
+
+@page {
+  size: 8.75in 8.75in; /* trim + bleed on all sides */
+  margin: 0;
+}
+
+:root {
+  --trim-width: 8.5in;
+  --trim-height: 8.5in;
+  --bleed: 0.125in;
+  --page-width: calc(var(--trim-width) + (2 * var(--bleed)));
+  --page-height: calc(var(--trim-height) + (2 * var(--bleed)));
+  --safe-margin: 0.25in; /* keep text/faces inside this from the trim line */
+  --dpi: 300;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  position: relative;
+  width: var(--page-width);
+  height: var(--page-height);
+  overflow: hidden;
+  page-break-after: always;
+  background: #ffffff;
+}
+
+/* Trim guide, visible only when .show-guides is toggled for proofing */
+.page::after {
+  content: "";
+  position: absolute;
+  top: var(--bleed);
+  left: var(--bleed);
+  right: var(--bleed);
+  bottom: var(--bleed);
+  border: 1px dashed transparent;
+  pointer-events: none;
+}
+
+.show-guides .page::after {
+  border-color: rgba(255, 0, 0, 0.4);
+}
+
+.safe-area {
+  position: absolute;
+  top: calc(var(--bleed) + var(--safe-margin));
+  left: calc(var(--bleed) + var(--safe-margin));
+  right: calc(var(--bleed) + var(--safe-margin));
+  bottom: calc(var(--bleed) + var(--safe-margin));
+}
+
+.full-bleed-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Body text: kept large for read-aloud legibility, always inside safe area */
+.page-text {
+  font-family: var(--font-primary, "Fredoka"), var(--font-fallback, "Nunito"), sans-serif;
+  font-size: 24pt;
+  line-height: 1.4;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+@media print {
+  .show-guides .page::after {
+    display: none; /* never print trim guides */
+  }
+}

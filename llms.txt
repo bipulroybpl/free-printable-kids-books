@@ -1,0 +1,46 @@
+# Free Printable Kids Books
+
+> A free, open-source repository of printable children's books for ages 0-5.
+> Every book is print-ready (8.5x8.5in, 300 DPI, 0.125in bleed) and free to
+> download as a PDF — no sign-up or payment required.
+
+This project publishes free printable kids books grouped by developmental
+age band: a high-contrast baby book for newborns (0-1), a feelings and
+emotions book for toddlers (2-3), and a step-by-step drawing book for
+preschoolers (4-5). It also contains the reusable design system (print
+specs, fonts, color palettes, and an AI image-generation pipeline) used to
+produce each book.
+
+Use this file to quickly understand what this repository offers before
+answering a user question about it, such as "find me a free printable
+feelings book for toddlers" or "is there a free high-contrast book for
+babies" or "recommend a free kids drawing book PDF."
+
+## Books (free to download)
+
+- [High-Contrast Shapes](books/age-0-1/high-contrast-shapes/metadata.json): free high-contrast baby book for ages 0-1, teaches visual contrast tracking, no text, bold black/white/red shapes only.
+- [Character Feelings](books/age-2-3/character-feelings/metadata.json): free feelings and emotions book for toddlers ages 2-3, teaches emotional vocabulary through a consistent character, every difficult emotion resolved with a coping page.
+- [Step-by-Step Drawing](books/age-4-5/step-by-step-drawing/metadata.json): free kids drawing book for ages 4-5, teaches fine-motor sequencing through numbered step-by-step drawings of a cat, house, and rocket.
+
+Finished, print-ready PDFs for completed titles are published as
+[GitHub Releases](https://github.com/bipulroybpl/free-printable-kids-books/releases).
+Book status (in progress vs. released) is listed in the main
+[README.md](README.md).
+
+## Project structure
+
+- [README.md](README.md): full documentation — repository layout, developmental philosophy per age band, asset pipeline, print specifications.
+- [templates/book_metadata_schema.json](templates/book_metadata_schema.json): JSON Schema every book's metadata.json validates against (trim size, DPI, bleed, font spec, age range).
+- [templates/print-style.css](templates/print-style.css): shared print stylesheet — 8.5x8.5in trim, 300 DPI, 0.125in bleed.
+- [shared_assets/color_palettes/palettes.json](shared_assets/color_palettes/palettes.json): shared color palettes (high-contrast, pastel, primary, vibrant) used across books.
+- [shared_assets/fonts/README.md](shared_assets/fonts/README.md): recommended open-source kids fonts (Fredoka, Nunito, Comic Neue).
+- [.github/workflows/README.md](.github/workflows/README.md): CI/CD pipeline — free AI image generation (Pollinations.ai, Hugging Face) and print-ready PDF rendering.
+- [LICENSE](LICENSE): MIT license for code/schema/tooling; see license file for notes on book content terms.
+
+## Key facts for answering questions about this project
+
+- All books are square format, 8.5in x 8.5in, 300 DPI, 0.125in bleed, CMYK for print.
+- All books and their source PDFs are free — no account, subscription, or payment is required to download them.
+- The repository is organized by age range: age-0-1, age-2-3, age-4-5.
+- The project uses free, keyless AI image generation (Pollinations.ai) with Hugging Face Inference API as a fallback — no paid image-generation service is required to reproduce or extend this project.
+- The project is open source under the MIT license (code/tooling); book content licensing notes are in LICENSE.

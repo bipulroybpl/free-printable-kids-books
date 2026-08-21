@@ -1,0 +1,45 @@
+{
+  "palettes": {
+    "high-contrast": {
+      "description": "Black/white/red high-contrast palette for infant visual development (ages 0-1). Evidence-based: newborn-to-6-month vision responds strongly to sharp contrast before color perception matures.",
+      "recommended_age_range": "0-1",
+      "colors": [
+        { "name": "true-black", "hex": "#000000", "cmyk": [0, 0, 0, 100] },
+        { "name": "true-white", "hex": "#FFFFFF", "cmyk": [0, 0, 0, 0] },
+        { "name": "signal-red", "hex": "#E30613", "cmyk": [0, 95, 90, 0] }
+      ]
+    },
+    "pastel": {
+      "description": "Soft, low-saturation palette for calm, soothing scenes (ages 2-3, bedtime/feelings content).",
+      "recommended_age_range": "2-3",
+      "colors": [
+        { "name": "pastel-pink", "hex": "#F7C6D9", "cmyk": [0, 20, 5, 3] },
+        { "name": "pastel-blue", "hex": "#BFE3F2", "cmyk": [21, 3, 0, 5] },
+        { "name": "pastel-yellow", "hex": "#FDF3B4", "cmyk": [0, 2, 25, 1] },
+        { "name": "pastel-mint", "hex": "#C6EBD9", "cmyk": [23, 0, 15, 8] },
+        { "name": "pastel-lavender", "hex": "#DCD1EC", "cmyk": [15, 20, 0, 8] }
+      ]
+    },
+    "primary": {
+      "description": "Bold primary colors for early color recognition and object learning (ages 2-4).",
+      "recommended_age_range": "2-3",
+      "colors": [
+        { "name": "primary-red", "hex": "#ED1C24", "cmyk": [0, 92, 88, 0] },
+        { "name": "primary-blue", "hex": "#0072BC", "cmyk": [93, 51, 0, 0] },
+        { "name": "primary-yellow", "hex": "#FFF200", "cmyk": [0, 0, 94, 0] },
+        { "name": "primary-green", "hex": "#00A651", "cmyk": [86, 0, 88, 0] }
+      ]
+    },
+    "vibrant": {
+      "description": "Energetic, saturated palette for active/adventure content (ages 4-5).",
+      "recommended_age_range": "4-5",
+      "colors": [
+        { "name": "vibrant-orange", "hex": "#F7941D", "cmyk": [0, 47, 92, 0] },
+        { "name": "vibrant-teal", "hex": "#00A99D", "cmyk": [83, 0, 34, 0] },
+        { "name": "vibrant-purple", "hex": "#92278F", "cmyk": [45, 92, 0, 0] },
+        { "name": "vibrant-pink", "hex": "#EC008C", "cmyk": [0, 96, 8, 0] },
+        { "name": "vibrant-lime", "hex": "#8DC63F", "cmyk": [49, 0, 100, 0] }
+      ]
+    }
+  }
+}

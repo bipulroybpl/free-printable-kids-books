@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Large / working design files (keep repo lightweight)
+*.psd
+*.ai
+*.xcf
+*.tif
+*.tiff
+
+# Raw AI-generation dumps can get large; final print assets are tracked,
+# raw drafts are local-only by default (remove this line if you want raw
+# assets versioned too)
+books/**/assets/raw/*
+!books/**/assets/raw/.gitkeep
+
+# Font binaries (documented in shared_assets/fonts/README.md, not vendored)
+shared_assets/fonts/*.ttf
+shared_assets/fonts/*.otf
+
+# Node/build tooling if a renderer is added later
+node_modules/
+dist/

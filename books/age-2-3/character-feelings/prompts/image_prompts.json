@@ -1,0 +1,72 @@
+{
+  "book_id": "character-feelings",
+  "style_modifiers_global": "warm children's picture book illustration, soft rounded character design, friendly fox character, flat pastel color palette, gentle gouache-style texture, thick clean outlines, consistent character model across all pages, no scary or grotesque elements --ar 1:1 --style raw --v 6",
+  "background_constraints": "simple soft pastel gradient or single-tone background, minimal props, no cluttered scenery, character always the clear focal point",
+  "color_palette_ref": "shared_assets/color_palettes/palettes.json#/palettes/pastel",
+  "character_reference": "Consistent main character: small child-like fox, round friendly face, big soft eyes, orange-and-cream fur, no clothing details that vary between pages",
+  "prompts": [
+    {
+      "page": 2,
+      "prompt": "friendly child-like fox character smiling broadly with arms raised up in joy, soft pastel yellow background, warm children's picture book illustration, flat pastel colors, gentle texture, consistent character design --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 3,
+      "prompt": "friendly child-like fox character mid-jump with a big happy grin, small motion lines, soft pastel yellow background, warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 4,
+      "prompt": "friendly child-like fox character with a gentle frown and one small teardrop, soft pastel blue background, warm children's picture book illustration, expression is gentle sadness not distress --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 5,
+      "prompt": "friendly child-like fox character being gently hugged by a warm caregiver figure, soft pastel blue background, comforting warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 6,
+      "prompt": "friendly child-like fox character with furrowed brow and crossed arms showing mild frustration, calm not aggressive, soft pastel orange background, warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 7,
+      "prompt": "friendly child-like fox character with eyes closed, one hand on chest, taking a calming deep breath, soft pastel green background, warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 8,
+      "prompt": "friendly child-like fox character peeking out with wide curious eyes, hands near face but not distressed, soft pastel lavender background, warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 9,
+      "prompt": "friendly child-like fox character reaching toward a smiling caregiver figure for a hug, soft pastel lavender background, warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 10,
+      "prompt": "friendly child-like fox character with raised eyebrows and open mouth in gentle surprise, looking at a small colorful butterfly, soft pastel background, warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 11,
+      "prompt": "friendly child-like fox character smiling relaxed at a small butterfly landing nearby, soft pastel background, warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 12,
+      "prompt": "friendly child-like fox character peeking shyly from behind a small tree, small smile, soft pastel background, warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 13,
+      "prompt": "friendly child-like fox character waving hello with a small smile next to a friend character, soft pastel background, warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 14,
+      "prompt": "friendly child-like fox character surrounded by small simple face icons representing happy, sad, angry, scared, and surprised, warm pastel background, warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    },
+    {
+      "page": 15,
+      "prompt": "friendly child-like fox character pointing outward toward the viewer with a warm inviting smile, soft pastel background, warm children's picture book illustration --ar 1:1 --style raw --v 6"
+    }
+  ],
+  "prohibited_elements": [
+    "blended or ambiguous facial expressions",
+    "excessive tears, gritted teeth, or screaming mouths",
+    "dark or threatening backgrounds",
+    "inconsistent character proportions between pages",
+    "text embedded within the illustration itself"
+  ]
+}

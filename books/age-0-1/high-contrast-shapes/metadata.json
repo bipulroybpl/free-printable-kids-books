@@ -1,0 +1,28 @@
+{
+  "title": "Look and See: High-Contrast Shapes",
+  "book_id": "high-contrast-shapes",
+  "age_range": "0-1",
+  "developmental_focus": "Visual contrast tracking and early focal attention. Infant vision (0-4 months) responds most strongly to sharp black/white/red contrast before full color perception develops (~4-6 months).",
+  "trim_size": {
+    "width_in": 8.5,
+    "height_in": 8.5
+  },
+  "print_spec": {
+    "dpi": 300,
+    "bleed_in": 0.125,
+    "color_mode": "CMYK"
+  },
+  "font_spec": {
+    "primary_font": "Nunito",
+    "fallback_font": "Arial",
+    "min_point_size": 24
+  },
+  "total_pages": 12,
+  "color_palette": "high-contrast",
+  "safety_notes": [
+    "No small, choking-hazard-shaped isolated details (e.g. tiny circles resembling buttons/beads).",
+    "No thin single-stroke line art; all shapes rendered as bold, filled, high-contrast forms.",
+    "Board-book format assumed for physical production (rounded corners, thick pages) even though this repo tracks print-ready flat pages.",
+    "No text on infant-facing spreads; any text is caregiver-facing only and minimal."
+  ]
+}
