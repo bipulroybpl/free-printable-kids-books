@@ -16,6 +16,14 @@ on:
         description: "Path to the book directory, e.g. books/age-2-3/character-feelings"
         required: true
         type: string
+      primary_generator:
+        description: "Which generator to try first"
+        required: false
+        type: choice
+        default: pollinations
+        options:
+          - pollinations
+          - huggingface
 
 jobs:
   generate:
@@ -33,7 +41,7 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          python .github/workflows/scripts/generate_images.py "${{ inputs.book_path }}"
+          python .github/workflows/scripts/generate_images.py "${{ inputs.book_path }}" --primary "${{ inputs.primary_generator }}"
 
       - name: Open PR with generated assets
         uses: peter-evans/create-pull-request@v6

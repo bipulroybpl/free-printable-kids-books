@@ -2,15 +2,19 @@
 """
 Batch image generation for a single book, driven by prompts/image_prompts.json.
 
-Primary generator: Pollinations.ai (free, no API key required).
-Fallback generator: Hugging Face Inference API (requires HF_TOKEN env var,
-set as a GitHub Actions secret -- never hardcode a token in this file).
+Two generators are supported, either can be primary (the other becomes the
+fallback if the primary fails):
+- pollinations: Pollinations.ai, free, no API key required.
+- huggingface: Hugging Face Inference API (FLUX.1-schnell), requires HF_TOKEN
+  env var, set as a GitHub Actions secret -- never hardcode a token in this
+  file.
 
 Usage:
-    python generate_images.py <path-to-book-dir>
+    python generate_images.py <path-to-book-dir> [--primary pollinations|huggingface]
 
 Writes one PNG per prompt into <book-dir>/assets/raw/page-<N>.png
 """
+import argparse
 import json
 import os
 import sys
@@ -69,24 +73,36 @@ def generate_via_huggingface(prompt: str, token: str) -> bytes:
     return _fetch_with_retries(build_request)
 
 
-def generate_page(prompt: str, hf_token: str | None) -> bytes:
-    try:
-        return generate_via_pollinations(prompt)
-    except (urllib.error.URLError, urllib.error.HTTPError) as exc:
-        print(f"  Pollinations failed ({exc}); falling back to Hugging Face...", flush=True)
-        if not hf_token:
-            raise RuntimeError(
-                "Pollinations failed and no HF_TOKEN provided for fallback"
-            ) from exc
-        return generate_via_huggingface(prompt, hf_token)
+def generate_page(prompt: str, hf_token: str | None, primary: str) -> bytes:
+    generators = {
+        "pollinations": ("Pollinations", lambda: generate_via_pollinations(prompt)),
+        "huggingface": ("Hugging Face", lambda: generate_via_huggingface(prompt, hf_token)),
+    }
+    order = [primary] + [g for g in generators if g != primary]
+
+    last_exc = None
+    for i, name in enumerate(order):
+        label, call = generators[name]
+        if name == "huggingface" and not hf_token:
+            print(f"  Skipping {label}: no HF_TOKEN set", flush=True)
+            continue
+        try:
+            return call()
+        except (urllib.error.URLError, urllib.error.HTTPError) as exc:
+            last_exc = exc
+            remaining = order[i + 1:]
+            if remaining:
+                print(f"  {label} failed ({exc}); falling back to {generators[remaining[0]][0]}...", flush=True)
+    raise last_exc or RuntimeError("No generator available (check HF_TOKEN)")
 
 
 def main() -> int:
-    if len(sys.argv) != 2:
-        print("Usage: generate_images.py <path-to-book-dir>", file=sys.stderr)
-        return 1
+    parser = argparse.ArgumentParser()
+    parser.add_argument("book_dir")
+    parser.add_argument("--primary", choices=["pollinations", "huggingface"], default="pollinations")
+    args = parser.parse_args()
 
-    book_dir = sys.argv[1]
+    book_dir = args.book_dir
     prompts_path = os.path.join(book_dir, "prompts", "image_prompts.json")
     raw_dir = os.path.join(book_dir, "assets", "raw")
     os.makedirs(raw_dir, exist_ok=True)
@@ -95,6 +111,8 @@ def main() -> int:
         data = json.load(f)
 
     hf_token = os.environ.get("HF_TOKEN")  # sourced from secrets.HF_TOKEN in CI only
+
+    print(f"Primary generator: {args.primary}", flush=True)
 
     for entry in data["prompts"]:
         page = entry["page"]
@@ -107,7 +125,7 @@ def main() -> int:
 
         print(f"Page {page}: generating...", flush=True)
         try:
-            image_bytes = generate_page(prompt, hf_token)
+            image_bytes = generate_page(prompt, hf_token, args.primary)
         except Exception as exc:
             print(f"Page {page}: FAILED -- {exc}", file=sys.stderr, flush=True)
             continue
