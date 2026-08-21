@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "page": 2, "shape": "circle" },
+    { "page": 3, "shape": "checkerboard" },
+    { "page": 4, "shape": "wavy_stripe" },
+    { "page": 5, "shape": "square" },
+    { "page": 6, "shape": "bullseye" },
+    { "page": 7, "shape": "face" },
+    { "page": 8, "shape": "stripes_vertical" },
+    { "page": 9, "shape": "star" },
+    { "page": 10, "shape": "heart" },
+    { "page": 11, "shape": "spiral" }
+  ]
+}
