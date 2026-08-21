@@ -104,7 +104,7 @@ def main():
 
     composed = 0
     for entry in data["prompts"]:
-        if "letter_prompt" not in entry:
+        if "letter" not in entry:
             continue  # single-image page, nothing to compose
         page = entry["page"]
         letter_path = os.path.join(raw_dir, f"page-{page}-letter.png")
