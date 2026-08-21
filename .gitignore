@@ -13,11 +13,11 @@ Thumbs.db
 *.tif
 *.tiff
 
-# Raw AI-generation dumps can get large; final print assets are tracked,
-# raw drafts are local-only by default (remove this line if you want raw
-# assets versioned too)
-books/**/assets/raw/*
-!books/**/assets/raw/.gitkeep
+# Note: raw AI-generated drafts (books/**/assets/raw/) ARE tracked, not
+# ignored -- the image-generation workflow commits them to a PR branch so a
+# human can review before promoting anything to assets/final/. Don't add an
+# ignore rule here for assets/raw/ or that review flow silently breaks (the
+# PR-creation step finds no diff and never opens).
 
 # Font binaries (documented in shared_assets/fonts/README.md, not vendored)
 shared_assets/fonts/*.ttf
