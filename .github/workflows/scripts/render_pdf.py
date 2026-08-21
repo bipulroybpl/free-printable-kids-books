@@ -91,13 +91,20 @@ def render_page(page_w, page_h, image_path, text, font, bleed_px, safe_px, bg_co
 
     if image_path and os.path.exists(image_path):
         art = Image.open(image_path).convert("RGB")
-        scale = max(page_w / art.width, page_h / art.height)
-        new_size = (round(art.width * scale), round(art.height * scale))
+        # Fit-to-width and pad top/bottom rather than cover-fit-and-crop --
+        # cover-fit was cropping ~28% off the left/right edges of every
+        # square (1:1) final-art page to fill the taller portrait trim size,
+        # clipping letters/objects positioned near the panel edges.
+        scale = page_w / art.width
+        new_size = (page_w, round(art.height * scale))
         art = art.resize(new_size, Image.LANCZOS)
-        left = (art.width - page_w) // 2
-        top = (art.height - page_h) // 2
-        art = art.crop((left, top, left + page_w, top + page_h))
-        canvas.paste(art, (0, 0))
+        if new_size[1] >= page_h:
+            top = (new_size[1] - page_h) // 2
+            art = art.crop((0, top, page_w, top + page_h))
+            canvas.paste(art, (0, 0))
+        else:
+            top = (page_h - new_size[1]) // 2
+            canvas.paste(art, (0, top))
 
     if text:
         draw = ImageDraw.Draw(canvas, "RGBA")
