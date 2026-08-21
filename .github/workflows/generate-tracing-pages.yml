@@ -1,0 +1,46 @@
+name: Generate Tracing Pages
+
+# Manually triggered: pick a code-generated tracing/pre-writing book (one
+# with prompts/tracing_config.json, e.g. drawing-abc-letters,
+# drawing-123-numbers, pre-writing-strokes) and render its pages directly
+# with scripts/generate_tracing_pages.py -- no AI image generation involved.
+# Opens a PR since this writes straight to assets/final/; there's no content-
+# safety review needed (deterministic code output), but a PR still gives a
+# chance to sanity-check the render before it lands on main.
+
+on:
+  workflow_dispatch:
+    inputs:
+      book_path:
+        description: "Path to the book directory, e.g. books/age-2-3/pre-writing-strokes"
+        required: true
+        type: string
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: pip install Pillow
+
+      - name: Generate tracing pages
+        run: |
+          python .github/workflows/scripts/generate_tracing_pages.py "${{ inputs.book_path }}"
+
+      - name: Open PR with generated pages
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: generate tracing pages for ${{ inputs.book_path }}"
+          title: "Generated tracing pages: ${{ inputs.book_path }}"
+          body: |
+            Code-generated tracing pages for `${{ inputs.book_path }}/assets/final/`.
+            No AI image generation involved -- sanity-check the render before merging.
+          branch: "generated-tracing/${{ github.run_id }}"

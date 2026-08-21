@@ -1,0 +1,43 @@
+{
+  "book_id": "pre-writing-strokes",
+  "type": "shape",
+  "background_rgb": [
+    253,
+    246,
+    250
+  ],
+  "items": [
+    {
+      "page": 2,
+      "shape": "vertical_line"
+    },
+    {
+      "page": 3,
+      "shape": "horizontal_line"
+    },
+    {
+      "page": 4,
+      "shape": "circle"
+    },
+    {
+      "page": 5,
+      "shape": "cross"
+    },
+    {
+      "page": 6,
+      "shape": "diagonal_line"
+    },
+    {
+      "page": 7,
+      "shape": "curve_wave"
+    },
+    {
+      "page": 8,
+      "shape": "zigzag"
+    },
+    {
+      "page": 9,
+      "shape": "square"
+    }
+  ]
+}

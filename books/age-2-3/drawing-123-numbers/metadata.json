@@ -1,0 +1,27 @@
+{
+  "title": "My First 123 Tracing",
+  "book_id": "drawing-123-numbers",
+  "age_range": "2-3",
+  "developmental_focus": "Pre-writing motor practice using numeral shapes as large traceable forms. As with letter tracing, independent correct-stroke numeral writing is typically a 3.5-4+ year skill; at 2-3 this book is meant for hand-over-hand tracing with a caregiver.",
+  "trim_size": {
+    "width_in": 8.27,
+    "height_in": 11.69
+  },
+  "print_spec": {
+    "dpi": 300,
+    "bleed_in": 0.125,
+    "color_mode": "CMYK"
+  },
+  "font_spec": {
+    "primary_font": "Fredoka",
+    "fallback_font": "Nunito",
+    "min_point_size": 28
+  },
+  "total_pages": 12,
+  "color_palette": "vibrant",
+  "safety_notes": [
+    "Content generated programmatically (code, not AI image generation) for pixel-precise numeral forms -- no AI content-safety review needed for this book.",
+    "Intended for hand-over-hand caregiver-assisted tracing at this age, not independent correct-stroke handwriting practice.",
+    "One large traceable numeral per page, extra-thick and simplified, with a small solid reference badge in the corner."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "book_id": "drawing-fruits",
+  "style_modifiers_global": "black and white line art coloring book page for toddlers, single bold thick black outline only, no shading, no color fill, no fine internal detail, no small enclosed regions, simple large clean shape, plain white background, one object alone centered --ar 1:1 --style raw --v 6",
+  "background_constraints": "plain white background only, no props, one fruit alone centered, no shading or gradients anywhere",
+  "color_palette_ref": "shared_assets/color_palettes/palettes.json#/palettes/vibrant",
+  "prompts": [
+    { "page": 2, "prompt": "black and white line art coloring page, single bold thick black outline of one apple with a small leaf, no shading, no internal detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 3, "prompt": "black and white line art coloring page, single bold thick black outline of one banana, no shading, no internal detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 4, "prompt": "black and white line art coloring page, single bold thick black outline of one orange fruit with a small leaf, no shading, no internal detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 5, "prompt": "black and white line art coloring page, single bold thick black outline of one large simple grape bunch shape (not individual tiny grapes), no shading, no internal detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 6, "prompt": "black and white line art coloring page, single bold thick black outline of one strawberry with a leaf top, no shading, no internal detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 7, "prompt": "black and white line art coloring page, single bold thick black outline of one watermelon slice, no shading, no internal detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 8, "prompt": "black and white line art coloring page, single bold thick black outline of one pineapple, no shading, no internal detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 9, "prompt": "black and white line art coloring page, single bold thick black outline of one pear, no shading, no internal detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" }
+  ],
+  "prohibited_elements": [
+    "any color fill or shading -- line art only",
+    "small enclosed regions or fine detail (visible seeds, texture lines) that a toddler cannot color inside of",
+    "more than one fruit per page",
+    "photorealistic rendering",
+    "text embedded within the illustration itself"
+  ]
+}

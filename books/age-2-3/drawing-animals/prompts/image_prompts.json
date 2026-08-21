@@ -1,0 +1,24 @@
+{
+  "book_id": "drawing-animals",
+  "style_modifiers_global": "black and white line art coloring book page for toddlers, single bold thick black outline only, no shading, no color fill, no fine internal detail, no small enclosed regions, simple large clean shape, plain white background, one friendly animal alone centered, calm non-threatening pose --ar 1:1 --style raw --v 6",
+  "background_constraints": "plain white background only, no props, one animal alone centered, no shading or gradients anywhere",
+  "color_palette_ref": "shared_assets/color_palettes/palettes.json#/palettes/primary",
+  "prompts": [
+    { "page": 2, "prompt": "black and white line art coloring page, single bold thick black outline of one friendly standing cow, calm pose, no shading, no fine fur detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 3, "prompt": "black and white line art coloring page, single bold thick black outline of one friendly sitting dog, calm pose, no shading, no fine fur detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 4, "prompt": "black and white line art coloring page, single bold thick black outline of one friendly sitting cat, calm pose, no shading, no fine fur detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 5, "prompt": "black and white line art coloring page, single bold thick black outline of one friendly standing duck, calm pose, no shading, no fine feather detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 6, "prompt": "black and white line art coloring page, single bold thick black outline of one friendly standing baby elephant with big ears, calm pose, no shading, no fine detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 7, "prompt": "black and white line art coloring page, single bold thick black outline of one friendly sitting rabbit with long ears, calm pose, no shading, no fine fur detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 8, "prompt": "black and white line art coloring page, single bold thick black outline of one friendly simple fish, calm pose, no shading, no fine scale detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" },
+    { "page": 9, "prompt": "black and white line art coloring page, single bold thick black outline of one friendly sitting owl, calm pose, no shading, no fine feather detail, no color fill, plain white background, simple large clean shape for a toddler to color --ar 1:1 --style raw --v 6" }
+  ],
+  "prohibited_elements": [
+    "any color fill or shading -- line art only",
+    "small enclosed regions or fine detail (fur texture, feather patterns) that a toddler cannot color inside of",
+    "more than one animal per page",
+    "aggressive, roaring, or predatory poses",
+    "photorealistic rendering",
+    "text embedded within the illustration itself"
+  ]
+}

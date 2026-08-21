@@ -1,0 +1,27 @@
+{
+  "title": "My First Pre-Writing Strokes",
+  "book_id": "pre-writing-strokes",
+  "age_range": "2-3",
+  "developmental_focus": "The actual developmental precursor to letter writing: basic pre-writing strokes (vertical line, horizontal line, circle, cross, diagonal, curve, zigzag, square) that occupational-therapy guidance identifies as emerging in this order between roughly ages 2 and 3.5, before any letterform tracing is meaningful.",
+  "trim_size": {
+    "width_in": 8.27,
+    "height_in": 11.69
+  },
+  "print_spec": {
+    "dpi": 300,
+    "bleed_in": 0.125,
+    "color_mode": "CMYK"
+  },
+  "font_spec": {
+    "primary_font": "Fredoka",
+    "fallback_font": "Nunito",
+    "min_point_size": 28
+  },
+  "total_pages": 10,
+  "color_palette": "pastel",
+  "safety_notes": [
+    "Content generated programmatically (code, not AI image generation) for pixel-precise geometric guides -- no AI content-safety review needed for this book.",
+    "Strokes ordered by typical developmental emergence (vertical/horizontal line first, more complex shapes like zigzag and square last).",
+    "This book, not the ABC/123 tracing books, is the most age-appropriate 'first tracing' material for a 2-3 year old and is recommended as the starting point in the series."
+  ]
+}

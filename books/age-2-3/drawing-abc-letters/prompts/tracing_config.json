@@ -1,0 +1,141 @@
+{
+  "book_id": "drawing-abc-letters",
+  "type": "letter",
+  "background_rgb": [
+    255,
+    250,
+    240
+  ],
+  "items": [
+    {
+      "page": 2,
+      "content": "A",
+      "label": "A"
+    },
+    {
+      "page": 3,
+      "content": "B",
+      "label": "B"
+    },
+    {
+      "page": 4,
+      "content": "C",
+      "label": "C"
+    },
+    {
+      "page": 5,
+      "content": "D",
+      "label": "D"
+    },
+    {
+      "page": 6,
+      "content": "E",
+      "label": "E"
+    },
+    {
+      "page": 7,
+      "content": "F",
+      "label": "F"
+    },
+    {
+      "page": 8,
+      "content": "G",
+      "label": "G"
+    },
+    {
+      "page": 9,
+      "content": "H",
+      "label": "H"
+    },
+    {
+      "page": 10,
+      "content": "I",
+      "label": "I"
+    },
+    {
+      "page": 11,
+      "content": "J",
+      "label": "J"
+    },
+    {
+      "page": 12,
+      "content": "K",
+      "label": "K"
+    },
+    {
+      "page": 13,
+      "content": "L",
+      "label": "L"
+    },
+    {
+      "page": 14,
+      "content": "M",
+      "label": "M"
+    },
+    {
+      "page": 15,
+      "content": "N",
+      "label": "N"
+    },
+    {
+      "page": 16,
+      "content": "O",
+      "label": "O"
+    },
+    {
+      "page": 17,
+      "content": "P",
+      "label": "P"
+    },
+    {
+      "page": 18,
+      "content": "Q",
+      "label": "Q"
+    },
+    {
+      "page": 19,
+      "content": "R",
+      "label": "R"
+    },
+    {
+      "page": 20,
+      "content": "S",
+      "label": "S"
+    },
+    {
+      "page": 21,
+      "content": "T",
+      "label": "T"
+    },
+    {
+      "page": 22,
+      "content": "U",
+      "label": "U"
+    },
+    {
+      "page": 23,
+      "content": "V",
+      "label": "V"
+    },
+    {
+      "page": 24,
+      "content": "W",
+      "label": "W"
+    },
+    {
+      "page": 25,
+      "content": "X",
+      "label": "X"
+    },
+    {
+      "page": 26,
+      "content": "Y",
+      "label": "Y"
+    },
+    {
+      "page": 27,
+      "content": "Z",
+      "label": "Z"
+    }
+  ]
+}

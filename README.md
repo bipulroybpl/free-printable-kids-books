@@ -16,6 +16,12 @@ A4, 8.27x11.69in) and free to download as a PDF — no sign-up required.
 | 2-3 (toddlers) | [Baby's First Learning ABC](books/age-2-3/baby-first-abc/) | Letter-shape recognition & vocabulary — a free **alphabet book for toddlers** / ABC book for kids | In progress |
 | 2-3 (toddlers) | [Baby's First Learning 123](books/age-2-3/baby-first-123/) | Number recognition & one-to-one counting (1-10) — a free **counting book for toddlers** / 123 book for kids | In progress |
 | 2-3 (toddlers) | [My First Animal Sounds](books/age-2-3/animal-sounds/) | Vocabulary & auditory-verbal imitation — a free **animal sounds book for toddlers** / animal book for kids | In progress |
+| 2-3 (toddlers) | [Pre-Writing Strokes & Shapes](books/age-2-3/pre-writing-strokes/) | Pre-writing motor skills (lines, circles, zigzags) — the real precursor to letter tracing at this age | In progress |
+| 2-3 (toddlers) | [My First ABC Tracing](books/age-2-3/drawing-abc-letters/) | Letterform tracing (caregiver-assisted) — a free **ABC tracing book for toddlers** | In progress |
+| 2-3 (toddlers) | [My First 123 Tracing](books/age-2-3/drawing-123-numbers/) | Numeral tracing (caregiver-assisted) — a free **123 tracing book for toddlers** | In progress |
+| 2-3 (toddlers) | [Coloring Book: Fruits](books/age-2-3/drawing-fruits/) | Fine-motor coloring practice + fruit vocabulary — a free **fruit coloring book for toddlers** | In progress |
+| 2-3 (toddlers) | [Coloring Book: Flowers](books/age-2-3/drawing-flowers/) | Fine-motor coloring practice + flower vocabulary — a free **flower coloring book for toddlers** | In progress |
+| 2-3 (toddlers) | [Coloring Book: Animals](books/age-2-3/drawing-animals/) | Fine-motor coloring practice + animal vocabulary — a free **animal coloring book for toddlers** | In progress |
 | 4-5 (preschoolers) | [Step-by-Step Drawing](books/age-4-5/step-by-step-drawing/) | Fine-motor sequencing — a free **kids drawing book**, learn to draw step by step | In progress |
 
 > Finished, print-ready PDFs are published under [Releases](https://github.com/bipulroybpl/free-printable-kids-books/releases) as each title is completed. Source manuscripts, prompts, and print specs for every book live in this repo.

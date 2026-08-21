@@ -1,0 +1,61 @@
+{
+  "book_id": "drawing-123-numbers",
+  "type": "number",
+  "background_rgb": [
+    250,
+    250,
+    255
+  ],
+  "items": [
+    {
+      "page": 2,
+      "content": "1",
+      "label": "1"
+    },
+    {
+      "page": 3,
+      "content": "2",
+      "label": "2"
+    },
+    {
+      "page": 4,
+      "content": "3",
+      "label": "3"
+    },
+    {
+      "page": 5,
+      "content": "4",
+      "label": "4"
+    },
+    {
+      "page": 6,
+      "content": "5",
+      "label": "5"
+    },
+    {
+      "page": 7,
+      "content": "6",
+      "label": "6"
+    },
+    {
+      "page": 8,
+      "content": "7",
+      "label": "7"
+    },
+    {
+      "page": 9,
+      "content": "8",
+      "label": "8"
+    },
+    {
+      "page": 10,
+      "content": "9",
+      "label": "9"
+    },
+    {
+      "page": 11,
+      "content": "10",
+      "label": "10"
+    }
+  ]
+}
