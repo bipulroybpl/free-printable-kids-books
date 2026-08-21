@@ -12,7 +12,13 @@ fallback if the primary fails):
 Usage:
     python generate_images.py <path-to-book-dir> [--primary pollinations|huggingface]
 
-Writes one PNG per prompt into <book-dir>/assets/raw/page-<N>.png
+Each entry in prompts/image_prompts.json is either:
+  - {"page": N, "prompt": "..."} -> writes assets/raw/page-N.png
+  - {"page": N, "letter_prompt": "...", "object_prompt": "..."} -> writes
+    assets/raw/page-N-letter.png and assets/raw/page-N-object.png separately
+    (used when a page's full layout is composited from two simpler images
+    rather than generated as one complex composition -- see
+    scripts/compose_split_panel.py)
 """
 import argparse
 import json
@@ -114,25 +120,30 @@ def main() -> int:
 
     print(f"Primary generator: {args.primary}", flush=True)
 
+    jobs = []  # list of (label, prompt, out_path)
     for entry in data["prompts"]:
         page = entry["page"]
-        prompt = entry["prompt"]
-        out_path = os.path.join(raw_dir, f"page-{page}.png")
+        if "prompt" in entry:
+            jobs.append((f"page {page}", entry["prompt"], os.path.join(raw_dir, f"page-{page}.png")))
+        else:
+            jobs.append((f"page {page} letter", entry["letter_prompt"], os.path.join(raw_dir, f"page-{page}-letter.png")))
+            jobs.append((f"page {page} object", entry["object_prompt"], os.path.join(raw_dir, f"page-{page}-object.png")))
 
+    for label, prompt, out_path in jobs:
         if os.path.exists(out_path):
-            print(f"Page {page}: already exists, skipping")
+            print(f"{label}: already exists, skipping")
             continue
 
-        print(f"Page {page}: generating...", flush=True)
+        print(f"{label}: generating...", flush=True)
         try:
             image_bytes = generate_page(prompt, hf_token, args.primary)
         except Exception as exc:
-            print(f"Page {page}: FAILED -- {exc}", file=sys.stderr, flush=True)
+            print(f"{label}: FAILED -- {exc}", file=sys.stderr, flush=True)
             continue
 
         with open(out_path, "wb") as f:
             f.write(image_bytes)
-        print(f"Page {page}: saved to {out_path}", flush=True)
+        print(f"{label}: saved to {out_path}", flush=True)
         time.sleep(2)  # polite pacing against free-tier rate limits
 
     return 0
